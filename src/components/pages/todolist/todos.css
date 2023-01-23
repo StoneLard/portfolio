@@ -1,0 +1,415 @@
+.clear--completed {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: 100%;
+	vertical-align: baseline;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.todo--app--container {
+    font-family: "Work Sans", sans-serif;
+
+	color: #222;
+	min-width: 230px;
+	width: 90%;
+	max-width: 550px;
+	margin-top: 15rem;
+
+	margin-inline: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 300;
+}
+
+.hidden {
+	display: none;
+}
+
+.todo--app {    
+	background: #fff;
+	margin: 130px 0 40px 0;
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+.todo--app input::-webkit-input-placeholder {
+	font-style: italic;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.todo--app input::-moz-placeholder {
+	font-style: italic;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.todo--app input::input-placeholder {
+	font-style: italic;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.todo--app .todo--heading {
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 500;
+	position: absolute;
+	top: -12rem;
+	width: 100%;
+	font-size: 8rem;
+	text-align: center;
+	color: rgba(175, 47, 47, 0.15);
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+
+.new--todo,
+.todo--edit {
+	position: relative;
+	margin: 0;
+	width: 100%;
+	font-size: 1.5rem;
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: 1.4em;
+	color: inherit;
+	padding: 6px;
+	border: 1px solid #999;
+	box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.new--todo {
+	padding: 16px 16px 16px 60px;
+	height: 65px;
+	border: none;
+	background: rgba(0, 0, 0, 0.003);
+	box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+}
+
+.todo--main {
+	position: relative;
+	z-index: 2;
+	border-top: 1px solid #e6e6e6;
+}
+
+.toggle--all {
+	width: 1px;
+	height: 1px;
+	border: none; /* Mobile Safari */
+	opacity: 0;
+	position: absolute;
+	right: 100%;
+	bottom: 100%;
+}
+
+.toggle--all + label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45px;
+	height: 65px;
+	font-size: 0;
+	position: absolute;
+	top: -65px;
+	left: -0;
+}
+
+.toggle--all + label:before {
+	content: '❯';
+	display: inline-block;
+	font-size: 1.4rem;
+	color: #949494;
+	padding: 10px 27px 10px 27px;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.toggle--all:checked + label:before {
+	color: #484848;
+}
+
+.todo--list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.todo--list li {
+	position: relative;
+	font-size: 1.5rem;
+	border-bottom: 1px solid #ededed;
+}
+
+.todo--list li:last-child {
+	border-bottom: none;
+}
+
+.todo--list li.editing {
+	border-bottom: none;
+	padding: 0;
+}
+
+.todo--list li.editing .todo--edit {
+	display: block;
+	width: calc(100% - 43px);
+	padding: 12px 16px;
+	margin: 0 0 0 43px;
+}
+
+.todo--list li.editing .todo--show {
+	display: none;
+}
+
+.todo--list li .todo--completed--tgl {
+	text-align: center;
+	width: 40px;
+	height: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	border: none; 
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.todo--list li .todo--completed--tgl {
+	opacity: 0;
+}
+
+.todo--list li .todo--completed--tgl + label {
+	background-image: url('data:image/svg+xml;utf8,<svg%20xmlns%3D"http%3A//www.w3.org/2000/svg"%20width%3D"40"%20height%3D"40"%20viewBox%3D"-10%20-18%20100%20135"><circle%20cx%3D"50"%20cy%3D"50"%20r%3D"50"%20fill%3D"none"%20stroke%3D"%23949494"%20stroke-width%3D"3"/></svg>');
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+
+.todo--list li .todo--completed--tgl:checked + label {
+	background-image: url('data:image/svg+xml;utf8,<svg%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20width%3D"40"%20height%3D"40"%20viewBox%3D"-10%20-18%20100%20135"><circle%20cx%3D"50"%20cy%3D"50"%20r%3D"50"%20fill%3D"none"%20stroke%3D"%2359A193"%20stroke-width%3D"3"%2F><path%20fill%3D"%233EA390"%20d%3D"M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z"%2F><%2Fsvg>');
+}
+
+.todo--list li label {
+	word-break: break-all;
+	padding: 15px 40px 15px 60px;
+	display: block;
+	line-height: 1.2;
+	transition: color 0.4s;
+	font-weight: 400;
+	color: #484848;
+
+}
+
+
+.todo--list li.completed label {
+	color: #949494;
+	text-decoration: line-through;
+}
+
+.todo--list li .todo--remove {
+	display: none;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	bottom: 0;
+	width: 40px;
+	height: 40px;
+	margin: auto 0;
+	font-size: 30px;
+	color: #949494;
+	transition: color 0.2s ease-out;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.todo--list li .todo--remove:hover,
+.todo--list li .todo--remove:focus {
+	color: #C18585;
+}
+
+.todo--list li .todo--remove:after {
+	content: '×';
+	display: block;
+	height: 100%;
+	line-height: 1.1;
+}
+
+.todo--list li:hover .todo--remove {
+	display: block;
+}
+
+.todo--list li .todo--edit {
+	display: none;
+}
+
+.todo--list li.editing:last-child {
+	margin-bottom: -1px;
+}
+
+.todo--bottom {
+	padding: 10px 15px;
+	height: 40px;
+	text-align: center;
+	font-size: 15px;
+	border-top: 1px solid #e6e6e6;
+}
+
+
+.todo--bottom:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: 50px;
+	overflow: hidden;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+	            0 8px 0 -3px #f6f6f6,
+	            0 9px 1px -3px rgba(0, 0, 0, 0.2),
+	            0 16px 0 -6px #f6f6f6,
+	            0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+.todo--count {
+	float: left;
+	text-align: left;
+}
+
+.todo--count strong {
+	font-weight: 300;
+}
+
+.todo--filters {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	margin-top: -7px;
+	right: 0;
+	left: 0;
+}
+
+.todo--filters li {
+	display: inline;
+}
+
+.todo--filters li button {
+	color: inherit;
+	font-size: 100%;
+	font-family: 'Work Sans';
+	font-weight: 300;
+	margin: 3px;
+	padding: 3px 7px;
+	text-decoration: none;
+	background:  none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+}
+
+.todo--filters li button:hover {
+	border-color: #DB7676;
+}
+
+.todo--filters li button.selected {
+	border-color: #CE4646;
+}
+
+.clear--completed,
+html .clear--completed:active {
+	float: right;
+	position: relative;
+	line-height: 19px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.clear--completed:hover {
+	text-decoration: underline;
+}
+
+.info {
+	margin: 65px auto 0;
+	color: #4d4d4d;
+	font-size: 11px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	text-align: center;
+}
+
+.info p {
+	line-height: 1;
+}
+
+.info a {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.info a:hover {
+	text-decoration: underline;
+}
+
+.back--button {
+    padding: 5rem 0;
+    text-align: center;
+}
+.back--button a {
+    font-family: "Work Sans", sans-serif;
+    color: #222;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 30px;
+    background:rgba(175, 47, 47, 0.15);
+    transition: all ease-in 0.2s;
+}
+
+.back--button a:hover {
+    background: rgba(175, 47, 47, 1);
+    color: #fff;
+}
+
+/*
+	Hack to remove background from Mobile Safari.
+	Can't use it globally since it todo--removes checkboxes in Firefox
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.toggle--all,
+	.todo--list li .todo--completed--tgl {
+		background: none;
+	}
+
+	.todo--list li .todo--completed--tgl {
+		height: 40px;
+	}
+}
+
+@media (max-width: 510px) {
+	.todo--bottom {
+		height: 70px;
+	}
+
+	.todo--filters {
+		bottom: 10px;
+	}
+}
+
+:focus,
+.todo--completed--tgl:focus + label,
+.toggle--all:focus + label {
+	box-shadow: 0 0 2px 2px #CF7D7D;
+	outline: 0;
+}

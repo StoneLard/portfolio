@@ -1,0 +1,310 @@
+/*----------------------------------------------------------------
+ENLEARN---------------------------------------------------------*/
+
+
+.container {
+  width: 1000px;
+  margin-inline: auto;
+  display: flex;
+}
+
+.heading {
+  font-family: "Gothic A1", sans-serif;
+  padding-top: 5rem;
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+}
+
+
+.btn:disabled {
+  filter: grayscale(80%)
+}
+
+/*--------------------
+GAME FIELD-------------------*/
+
+.enlearn--field {
+  flex-basis: 600px;
+  
+}
+@media (max-width: 900px) {
+  .enlearn--field {
+    flex-basis: 300px;    
+  }
+}
+
+.game--input {
+  text-align: center;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+
+.english--learn input {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  width: 80%;
+  padding: 1rem 1rem 1rem 1rem;
+  border: none;
+  background: rgba(0, 0, 0, 0.003);
+  color: #222;
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.13);
+}
+
+
+
+.word--add--btn {
+  font-family: "Work Sans", sans-serif;
+  width: 20%;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 1rem 1rem;
+  border: none;
+  background: #2A6041a8;
+  color: #fff;
+  transition: all ease 0.2s;
+}
+
+
+
+.word--add--btn:hover:enabled {
+  cursor: pointer;
+  background: #2A6041;
+  color: #fff;
+}
+
+.game--controls {
+  margin-top: 2rem;
+  text-align: center;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.start--game--btn,
+.stop--game--btn,
+.list--tgl--btn,
+.list--clr--btn {
+  font-family: "Work Sans", sans-serif;
+  cursor: pointer;
+  width: 50%;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 1rem 1rem;
+  border: none;
+  color: #222;
+  transition: all ease 0.2s;
+} 
+
+
+
+.start--game--btn {
+  background: #2A6041;
+  color: #fff;
+}
+
+.stop--game--btn {
+  background-color: rgba(175, 47, 47, 1);
+  color: #fff;
+}
+
+.start--game--btn:hover:enabled {
+  background: #2A6041a8;
+}
+.stop--game--btn:hover:enabled {
+  background-color: rgba(175, 47, 47, 0.15);
+}
+
+.start--game--btn:disabled,
+.stop--game--btn:disabled,
+.list--tgl--btn:disabled,
+.list--clr--btn:disabled {
+  cursor: default;
+} 
+
+
+
+.words--field {
+  text-align: center;
+  padding-top: 3rem;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.word--space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 3rem;
+  width: 100%;
+  background-color: #fff;
+}
+.word--space h2 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.next--word--btn {
+  cursor: pointer;
+  max-width: 400px;
+  width: 100%;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  border: none;
+  color: #fff;
+  transition: all ease 0.2s;
+  background-color: #00698980;
+}
+
+.next--word--btn:hover:enabled {
+  background-color: #006989;
+}
+
+.next--word--btn:disabled {
+  cursor: default;
+}
+
+/*--------------------
+LIST FIELD-------------------*/
+.list--field {
+  flex-basis: 400px;
+}
+
+.list--showed {
+  background-color: rgba(175, 47, 47, 0.15);
+}
+
+.list--showed:hover:enabled {
+  background-color: rgba(175, 47, 47, 1);
+  color: #fff;
+}
+
+.list--hidden {
+  background-color: #29737380;
+  color: #fff;
+}
+
+.list--hidden:hover:enabled {
+  background-color: #297373;
+  color: #fff;
+}
+
+.list--clr--btn {
+  background:#27103380;
+  color: #fff;
+}
+
+.list--clr--btn:hover:enabled {
+  background:#271033;
+}
+.list--clr--btn:disabled {
+  cursor: default;
+}
+
+.current--list {
+  list-style-type: none;
+}
+
+.current--list li {
+  font-family: "Work Sans", sans-serif;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(175, 47, 47, 0.15);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.current--list li button {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  float: right;
+  border: none;
+  background: none;
+  color:rgba(175, 47, 47, 0.15);
+  transition: all ease 0.2s;
+}
+
+.current--list li button:hover {
+  color: rgba(175, 47, 47, 1);
+  cursor: pointer;
+}
+
+.list--is--empty {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  background: none;
+  color:rgba(175, 47, 47, 0.4);
+  transition: all ease 0.2s;
+}
+
+.back--button {
+  padding: 5rem 0;
+  text-align: center;
+}
+.back--button a {
+  font-family: "Work Sans", sans-serif;
+  color: #222;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 30px;
+  background:rgba(175, 47, 47, 0.15);
+  transition: all ease-in 0.2s;
+}
+
+.back--button a:hover {
+  background: rgba(175, 47, 47, 1);
+  color: #fff;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+  .container {
+      width: 800px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+      width: 90%;
+      margin-inline: auto;
+      flex-direction: column;
+  }
+  .game--field {
+      flex-basis: 0;
+  }
+  .list--field {
+      flex-basis: 0;
+      max-width: 400px;
+      width: 100%;
+      margin-inline: auto;
+  }
+
+  .words--field {
+      height: 250px;
+      padding-top: 2rem;
+
+  }
+  .word--space {
+      margin-bottom: 2rem;
+
+  }
+}
+
+
+/*----------------------------------------------------------------
+ENLEARN-END-----------------------------------------------------*/

@@ -1,0 +1,109 @@
+button:focus,
+.new--todo,
+#toggle--all + label {
+    outline: none;
+    box-shadow: none;
+}
+
+.game {
+    width: 90%;
+    max-width: 600px;
+    margin-inline: auto;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+
+.game--inf {
+    margin-inline: auto;
+    max-width: 250px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 1rem;
+    align-items: center;
+}
+.game--inf span {
+    width: 100%;
+    height: 100%;
+    font-size: 3rem;
+    text-align: center;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cross--turn--indicator svg path {
+    fill: green;
+}
+
+
+h2.ttt--heading {
+    font-family: 'Work Sans';
+    color: #222;
+    grid-column: 1;
+    font-size: 2.5rem;
+    font-weight: 300;
+    justify-self: center;
+    text-transform: uppercase;
+}
+
+h2.ttt--tie {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.circle--turn--indicator svg path {
+    fill: #C81D25;
+}
+
+.game--field {
+    margin: 20px auto;
+    height: 240px;
+    width: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0;
+}
+
+.cell {
+    font-family: "Work Sans";
+    background: none;
+    border: 1px solid #999;
+    outline: none;
+    cursor: pointer;
+    font-size: 60px;
+    font-weight: 100;
+}
+
+.cell:disabled {
+    color: #222;
+}
+
+
+.restart--button {
+    margin-top: 30px;
+    font-family: "Work Sans";
+    font-size: 1.5rem;
+    font-weight: 300;
+    background: none;
+    padding: 1rem;
+    border: 1px solid #999;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+.restart--button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.restart--button:disabled {
+    color: #999;
+}
+
+.restart--button:hover:disabled {
+    background-color: transparent;
+    color: #999;
+  }

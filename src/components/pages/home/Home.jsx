@@ -14,19 +14,7 @@ const Home = () => {
                         in Austin, TX.
                     </h1>
                     <div className="hero--examples">                        
-                        <h4 className="heading--link">test tasks</h4>
-                        <ul>
-                            <li>
-                                <a className="app--link" href="https://agency.nkruzhilin.ru" target="_blanc">agency</a>
-                            </li>
-                            <li>
-                                <a className="app--link" href="https://mountains.nkruzhilin.ru" target="_blanc">mountains</a>
-                            </li>
-                            <li>
-                                <a className="app--link" href="https://shop.nkruzhilin.ru" target="_blanc">shop</a>
-                            </li>
-                        </ul>
-                        <h4 className="home--mid--heading">apps</h4>
+                        <h4>apps</h4>
                         <ul>
                             <li>
                                 <Link className="app--link" to="/todos">todolist</Link>

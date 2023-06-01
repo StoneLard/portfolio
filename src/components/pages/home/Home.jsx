@@ -32,7 +32,7 @@ const Home = () => {
                                 <a className="app--link" href="https://skinfiles.ru" target="_blanc">skinfiles</a>
                             </li>
                             <li>
-                                <a className="app--link" href="https://getrealoffer.com" target="_blanc">getrealoffer</a>
+                                <a className="app--link" href="https://courses.skinfiles.ru" target="_blanc">courses</a>
                             </li>
                             <li>
                                 <a className="app--link" href="http://lopatin.design" target="_blanc">lopatin design</a>
